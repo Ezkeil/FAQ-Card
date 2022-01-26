@@ -55,6 +55,7 @@ function deactivate(questionElement, imageElement, duration = 250){
     window.setTimeout(function() {
         imageElement.style.removeProperty('transition-duration');
         imageElement.style.removeProperty('transition-property');
+        imageElement.style.removeProperty('transform');
     },duration)
 }
 

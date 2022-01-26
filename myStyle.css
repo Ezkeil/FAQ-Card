@@ -24,6 +24,7 @@ body {
   bottom: 0;
   width: 100%;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -40,11 +41,133 @@ body {
 
 /* For mobile phones: */
 [class*="col-"] {
-  width: 100%;
+  width: 90%;
 }
 
-@media only screen and (min-width: 768px) {
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #fff;
+  height: 68%;
+  border-radius: 20px;
+}
+
+.box{
+  display: none;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.img {
+  position: relative;
+  top: -20%;
+  margin-bottom: -25%;
+  width: 70%;
+  display: block;
+  align-self: center;
+  padding-bottom: 5%;
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+}
+
+.cardTitle {
+  text-align: center;
+  font-weight: 700;
+  font-size: 37px;
+}
+
+.qs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0 7%;
+}
+
+div p {
+  margin: 0;
+  padding: 2% 0;
+}
+
+.qs > div {
+  border-bottom: lightgray 1px solid;
+  padding: 4%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.arrow {
+  padding-top: 0.4rem;
+  float: right;
+}
+
+.question:active {
+  color: orange;
+}
+
+.answer {
+  display: none;
+}
+
+@media only screen and (min-width: 376px) {
   /* For desktop: */
+  .layout {
+    height: 70%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .img {
+    width: 40%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    position: relative;
+    right: 0;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 60%;
+    overflow: hidden;
+  }
+  .lady {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+  }
+  .box{
+    display: block;
+    z-index: 1;
+    height: 190px;
+    position: absolute;
+    top: 60%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: -95px;
+  }
+  .qs{
+    position: absolute;
+    right: 0;
+    width: 60%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+  }
+  .cardTitle{
+    text-align: left;
+  }
   .col-1 {
     width: 8.33%;
   }
@@ -81,75 +204,4 @@ body {
   .col-12 {
     width: 100%;
   }
-}
-
-.layout {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  background-color: #fff;
-  width: 90%;
-  height: 68%;
-  border-radius: 20px;
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.img {
-  position: relative;
-  top: -20%;
-  margin-bottom: -25%;
-  width: 70%;
-  display: block;
-  align-self: center;
-  padding-bottom: 5%;
-  background-image: url("images/bg-pattern-mobile.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom;
-}
-
-.cardTitle {
-  text-align: center;
-  font-weight: 700;
-  font-size: 37px;
-}
-
-.qs {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 7%;
-}
-
-div p {
-  margin: 0;
-  padding: 2% 0;
-}
-
-.qs > div {
-  border-bottom: lightgray 1px solid;
-  padding: 4%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.arrow {
-  padding-top: 0.4rem;
-  float: right;
-}
-
-.question:active {
-  color: orange;
-}
-
-.answer{
-  display: none;
 }

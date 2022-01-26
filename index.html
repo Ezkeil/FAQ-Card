@@ -21,14 +21,19 @@
     <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
   </head>
   <body>
-    <div class="layout center">
-      <img class="img" src="images\illustration-woman-online-mobile.svg" />
-      <div class="cardTitle">FAQ</div>
+    <div class="layout center col-8">
+      <img src="images\illustration-box-desktop.svg" class="box">
+      <picture  class="img">
+        <source srcset="images\illustration-woman-online-mobile.svg" media="(max-width: 376px)" >
+        <source srcset="images\illustration-woman-online-desktop.svg" >
+        <img src="images\illustration-woman-online-mobile.svg" class="lady"/>
+      </picture>
       <div class="qs">
+        <div class="cardTitle">FAQ</div>
         <div>
           <p class="question" id="q0">
             How many team members can I invite?
-            <img src="images\icon-arrow-down.svg" class="arrow" id="arrow0"/>
+            <img src="images\icon-arrow-down.svg" class="arrow"/>
           </p>
           <p class="answer" id="a0">
             You can invite up to 2 additional users. There is no limit on team
@@ -38,7 +43,7 @@
         <div>
           <p class="question" id="q1">
             What is the maximum file upload size?
-            <img src="images\icon-arrow-down.svg" class="arrow" id="arrow1"/>
+            <img src="images\icon-arrow-down.svg" class="arrow"/>
           </p>
           <p class="answer" id="a1">
             No more than 2GB. All files in your account must fit your allotted
@@ -48,7 +53,7 @@
         <div>
           <p class="question" id="q2">
             How do I reset my password?
-            <img src="images\icon-arrow-down.svg" class="arrow" id="arrow2"/>
+            <img src="images\icon-arrow-down.svg" class="arrow"/>
           </p>
           <p class="answer" id="a2">
             Click “Forgot password” from the login page or “Change password”
@@ -58,7 +63,7 @@
         <div>
           <p class="question" id="q3">
             Can I cancel my subscription?
-            <img src="images\icon-arrow-down.svg" class="arrow" id="arrow3"/>
+            <img src="images\icon-arrow-down.svg" class="arrow"/>
           </p>
           <p class="answer" id="a3">
             Yes! Send us a message and we will process your request no questions
@@ -68,7 +73,7 @@
         <div>
           <p class="question" id="q4">
             Do you provide additional support?
-            <img src="images\icon-arrow-down.svg" class="arrow" id="arrow4"/>
+            <img src="images\icon-arrow-down.svg" class="arrow"/>
           </p>
           <p class="answer" id="a4">
             Chat and email support is available 24/7. Phone lines are open
